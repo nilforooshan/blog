@@ -7,3 +7,12 @@
 #
 layout: home
 ---
+
+Welcome to my blog!
+
+In this blog, I write short-read posts about coding, quantitative genetics, and miscellaneous things.
+
+[![RSS](./icons/rss.png "RSS")](https://nilforooshan.github.io/blog/feed.xml)[Subscribe](https://nilforooshan.github.io/blog/feed.xml "RSS")   
+[![Homepage](./icons/homepage.png "Homepage")](https://nilforooshan.github.io/)[My website](https://nilforooshan.github.io/ "Homepage")
+
+---

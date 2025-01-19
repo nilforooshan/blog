@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Computing on Mohammad Ali Nilforooshan</title>
+    <link>https://nilforooshan.github.io/blog/tags/computing/</link>
+    <description>Recent content in Computing on Mohammad Ali Nilforooshan</description>
+    <image>
+      <title>Mohammad Ali Nilforooshan</title>
+      <url>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nilforooshan.github.io/blog/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding SWAP and RAM disk</title>
+      <link>https://nilforooshan.github.io/blog/posts/swap-ramdisk/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/swap-ramdisk/</guid>
+      <description>&lt;p&gt;I was familiar with the concept of SWAP in memory management until recently when I became familiar with the concept of &amp;ldquo;RAM disk&amp;rdquo;.
+In this blog post, I introduce both briefly.&lt;/p&gt;
+&lt;p&gt;In computing, memory management is critical to ensuring smooth performance and efficiency, especially as applications become more demanding.
+Two strategies, SWAP and RAM disk, help manage memory resources, albeit in very different ways.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-swap&#34;&gt;What is SWAP?&lt;/h2&gt;
+&lt;p&gt;SWAP, also known as swap space or swap memory, is a dedicated portion of disk storage set aside to act as an extension of a system&amp;rsquo;s physical memory (RAM).
+When a computer&amp;rsquo;s RAM is nearly full, the operating system can transfer some data from RAM to the SWAP area to avoid performance bottlenecks when RAM is under pressure.
+When the RAM cannot accommodate many programs and heavy applications, less active data is moved from the RAM to the SWAP space on the hard drive or SSD.
+This allows the system to continue running without immediate slowdowns.
+If that data is needed again, it&amp;rsquo;s &amp;ldquo;swapped in&amp;rdquo;, returning to RAM while another, less-needed piece of data may be swapped out.
+It should be noted that SWAP is considerably slower than RAM.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

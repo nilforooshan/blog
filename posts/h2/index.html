@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What does heritability do in BLUP? | Mohammad Ali Nilforooshan</title>
+<meta name="keywords" content="Quantitative Genetics">
+<meta name="description" content="Heritability ($\text h^2$) has biological and statistical definitions.
+Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population.
+Let&rsquo;s start with an example!
+I took example 3.1 from Mrode (2005).
+This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves.
+The data is presented in the following table:
+
+  
+      
+          Calf
+          Sex
+          Sire
+          Dam
+          WWG (kg)
+      
+  
+  
+      
+          4
+          Male
+          1
+          Unknown
+          4.5
+      
+      
+          5
+          Female
+          3
+          2
+          2.9
+      
+      
+          6
+          Female
+          1
+          2
+          3.9
+      
+      
+          7
+          Male
+          4
+          5
+          3.5
+      
+      
+          8
+          Male
+          3
+          6
+          5.0
+      
+  
+
+In an Animal Model BLUP, the inverse of the relationship matrix ($\mathbf A^{-1}$) is multiplied by $\lambda = (1 - \text h^2)/\text h^2$ (equal to $(4 - \text h^2)/\text h^2$ in a Sire Model BLUP).
+Considering $\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:">
+<meta name="author" content="Mohammad Ali Nilforooshan">
+<link rel="canonical" href="https://nilforooshan.github.io/blog/posts/h2/">
+<meta name="google-site-verification" content="G-JH0F7W96MC">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nilforooshan.github.io/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nilforooshan.github.io/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nilforooshan.github.io/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nilforooshan.github.io/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nilforooshan.github.io/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nilforooshan.github.io/blog/posts/h2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://nilforooshan.github.io/blog/posts/h2/">
+  <meta property="og:site_name" content="Mohammad Ali Nilforooshan">
+  <meta property="og:title" content="What does heritability do in BLUP?">
+  <meta property="og:description" content="Heritability ($\text h^2$) has biological and statistical definitions. Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population. Let’s start with an example! I took example 3.1 from Mrode (2005). This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves. The data is presented in the following table:
+Calf Sex Sire Dam WWG (kg) 4 Male 1 Unknown 4.5 5 Female 3 2 2.9 6 Female 1 2 3.9 7 Male 4 5 3.5 8 Male 3 6 5.0 In an Animal Model BLUP, the inverse of the relationship matrix ($\mathbf A^{-1}$) is multiplied by $\lambda = (1 - \text h^2)/\text h^2$ (equal to $(4 - \text h^2)/\text h^2$ in a Sire Model BLUP). Considering $\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:tag" content="Quantitative Genetics">
+      <meta property="og:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:title" content="What does heritability do in BLUP?">
+<meta name="twitter:description" content="Heritability ($\text h^2$) has biological and statistical definitions.
+Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population.
+Let&rsquo;s start with an example!
+I took example 3.1 from Mrode (2005).
+This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves.
+The data is presented in the following table:
+
+  
+      
+          Calf
+          Sex
+          Sire
+          Dam
+          WWG (kg)
+      
+  
+  
+      
+          4
+          Male
+          1
+          Unknown
+          4.5
+      
+      
+          5
+          Female
+          3
+          2
+          2.9
+      
+      
+          6
+          Female
+          1
+          2
+          3.9
+      
+      
+          7
+          Male
+          4
+          5
+          3.5
+      
+      
+          8
+          Male
+          3
+          6
+          5.0
+      
+  
+
+In an Animal Model BLUP, the inverse of the relationship matrix ($\mathbf A^{-1}$) is multiplied by $\lambda = (1 - \text h^2)/\text h^2$ (equal to $(4 - \text h^2)/\text h^2$ in a Sire Model BLUP).
+Considering $\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nilforooshan.github.io/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What does heritability do in BLUP?",
+      "item": "https://nilforooshan.github.io/blog/posts/h2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What does heritability do in BLUP?",
+  "name": "What does heritability do in BLUP?",
+  "description": "Heritability ($\\text h^2$) has biological and statistical definitions. Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population. Let\u0026rsquo;s start with an example! I took example 3.1 from Mrode (2005). This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves. The data is presented in the following table:\nCalf Sex Sire Dam WWG (kg) 4 Male 1 Unknown 4.5 5 Female 3 2 2.9 6 Female 1 2 3.9 7 Male 4 5 3.5 8 Male 3 6 5.0 In an Animal Model BLUP, the inverse of the relationship matrix ($\\mathbf A^{-1}$) is multiplied by $\\lambda = (1 - \\text h^2)/\\text h^2$ (equal to $(4 - \\text h^2)/\\text h^2$ in a Sire Model BLUP). Considering $\\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:\n",
+  "keywords": [
+    "Quantitative Genetics"
+  ],
+  "articleBody": "Heritability ($\\text h^2$) has biological and statistical definitions. Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population. Let’s start with an example! I took example 3.1 from Mrode (2005). This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves. The data is presented in the following table:\nCalf Sex Sire Dam WWG (kg) 4 Male 1 Unknown 4.5 5 Female 3 2 2.9 6 Female 1 2 3.9 7 Male 4 5 3.5 8 Male 3 6 5.0 In an Animal Model BLUP, the inverse of the relationship matrix ($\\mathbf A^{-1}$) is multiplied by $\\lambda = (1 - \\text h^2)/\\text h^2$ (equal to $(4 - \\text h^2)/\\text h^2$ in a Sire Model BLUP). Considering $\\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:\nEffects Solutions Sex Male 4.359 Female 3.404 Animal 1 0.098 2 -0.019 3 -0.041 4 -0.009 5 -0.186 6 0.177 7 -0.249 8 0.183 With $\\text h^2$ = 0.5 (λ = 1), the solutions change to:\nEffects Solutions Sex male 4.373 female 3.412 Animal 1 0.148 2 -0.034 3 -0.060 4 -0.007 5 -0.283 6 0.260 7 -0.388 8 0.275 The ranking of animals did not change. However, the range of breeding values changed from -0.249–0.183 to -0.388–0.275.\nBLUP regresses the estimated breeding values based on phenotype and relationship information toward the mean of the founder population (0). Let’s consider $\\text h^2$ = 0.001. The solutions change to:\nEffects Solutions Sex male 4.333 female 3.400 Animal 1 0.000 2 0.000 3 0.000 4 0.000 5 -0.001 6 0.001 7 -0.001 8 0.001 The range of breeding values becomes -0.001 to 0.001. The genetic variance got close to 0, and the breeding values heavily regressed toward 0. On the other hand, as the heritability gets closer to 1, the genetic variance gets closer to the phenotypic variance. Let’s consider h2 = 0.999. The solutions change to:\nEffects Solutions Sex male 4.443 female 3.491 Animal 1 0.281 2 -0.140 3 -0.085 4 0.056 5 -0.591 6 0.409 7 -0.942 8 0.556 Calculating $\\mathbf y - \\mathbf X \\hat{\\mathbf b}$ = {0.057, -0.591, 0.409, -0.943, 0.557}, we realise it is very close to the estimated breeding values of the phenotyped animals (animals 4–9).\n",
+  "wordCount" : "388",
+  "inLanguage": "en",
+  "image": "https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished": "2024-10-25T00:00:00Z",
+  "dateModified": "2024-10-25T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Mohammad Ali Nilforooshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nilforooshan.github.io/blog/posts/h2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mohammad Ali Nilforooshan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nilforooshan.github.io/blog/favicon.ico"
+    }
+  }
+}
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nilforooshan.github.io/blog/" accesskey="h" title="Mohammad Ali Nilforooshan (Alt + H)">Mohammad Ali Nilforooshan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nilforooshan.github.io/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/" title="My website">
+                    <span>My website</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What does heritability do in BLUP?
+    </h1>
+    <div class="post-meta"><span title='2024-10-25 00:00:00 +0000 UTC'>October 25, 2024</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan
+
+</div>
+  </header> 
+  <div class="post-content"><p>Heritability ($\text h^2$) has biological and statistical definitions.
+Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population.
+Let&rsquo;s start with an example!
+I took example 3.1 from <a href="https://www.cabidigitallibrary.org/doi/book/10.1079/9780851990002.0000">Mrode (2005)</a>.
+This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves.
+The data is presented in the following table:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Calf</th>
+          <th style="text-align: left">Sex</th>
+          <th style="text-align: center">Sire</th>
+          <th style="text-align: center">Dam</th>
+          <th style="text-align: center">WWG (kg)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: left">Male</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">Unknown</td>
+          <td style="text-align: center">4.5</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: left">Female</td>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">2.9</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td style="text-align: left">Female</td>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">3.9</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td style="text-align: left">Male</td>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">5</td>
+          <td style="text-align: center">3.5</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td style="text-align: left">Male</td>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center">6</td>
+          <td style="text-align: center">5.0</td>
+      </tr>
+  </tbody>
+</table>
+<p>In an Animal Model BLUP, the inverse of the relationship matrix ($\mathbf A^{-1}$) is multiplied by $\lambda = (1 - \text h^2)/\text h^2$ (equal to $(4 - \text h^2)/\text h^2$ in a Sire Model BLUP).
+Considering $\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Effects</th>
+          <th style="text-align: right">Solutions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em>Sex</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Male</td>
+          <td style="text-align: right">4.359</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Female</td>
+          <td style="text-align: right">3.404</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>Animal</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: right">0.098</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: right">-0.019</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: right">-0.041</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: right">-0.009</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: right">-0.186</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td style="text-align: right">0.177</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td style="text-align: right">-0.249</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td style="text-align: right">0.183</td>
+      </tr>
+  </tbody>
+</table>
+<p>With $\text h^2$ = 0.5 (λ = 1), the solutions change to:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Effects</th>
+          <th style="text-align: right">Solutions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em>Sex</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">male</td>
+          <td style="text-align: right">4.373</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">female</td>
+          <td style="text-align: right">3.412</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>Animal</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: right">0.148</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: right">-0.034</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: right">-0.060</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: right">-0.007</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: right">-0.283</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td style="text-align: right">0.260</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td style="text-align: right">-0.388</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td style="text-align: right">0.275</td>
+      </tr>
+  </tbody>
+</table>
+<p>The ranking of animals did not change.
+However, the range of breeding values changed from -0.249–0.183 to -0.388–0.275.</p>
+<p>BLUP regresses the estimated breeding values based on phenotype and relationship information toward the mean of the founder population (0).
+Let&rsquo;s consider $\text h^2$ = 0.001.
+The solutions change to:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Effects</th>
+          <th style="text-align: right">Solutions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em>Sex</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">male</td>
+          <td style="text-align: right">4.333</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">female</td>
+          <td style="text-align: right">3.400</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>Animal</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: right">0.000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: right">0.000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: right">0.000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: right">0.000</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: right">-0.001</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td style="text-align: right">0.001</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td style="text-align: right">-0.001</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td style="text-align: right">0.001</td>
+      </tr>
+  </tbody>
+</table>
+<p>The range of breeding values becomes -0.001 to 0.001.
+The genetic variance got close to 0, and the breeding values heavily regressed toward 0.
+On the other hand, as the heritability gets closer to 1, the genetic variance gets closer to the phenotypic variance.
+Let&rsquo;s consider h2 = 0.999.
+The solutions change to:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Effects</th>
+          <th style="text-align: right">Solutions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><em>Sex</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">male</td>
+          <td style="text-align: right">4.443</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">female</td>
+          <td style="text-align: right">3.491</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><em>Animal</em></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: right">0.281</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: right">-0.140</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: right">-0.085</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: right">0.056</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: right">-0.591</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">6</td>
+          <td style="text-align: right">0.409</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">7</td>
+          <td style="text-align: right">-0.942</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">8</td>
+          <td style="text-align: right">0.556</td>
+      </tr>
+  </tbody>
+</table>
+<p>Calculating $\mathbf y - \mathbf X \hat{\mathbf b}$ = {0.057, -0.591, 0.409, -0.943, 0.557}, we realise it is very close to the estimated breeding values of the phenotyped animals (animals 4–9).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nilforooshan.github.io/blog/tags/quantitative-genetics/">Quantitative Genetics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://nilforooshan.github.io/blog/">Mohammad Ali Nilforooshan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>RMarkdown cheat sheet | Mohammad Ali Nilforooshan</title>
+<meta name="keywords" content="R Markdown">
+<meta name="description" content="A basic YAML header to start with.
+Choose the desired output format.
+
+
+horizontal rule *** or ---
+
+Formatting
+Manual line break: End the line with two or more spaces.
+italic *italic* and italic _italic_
+bold **bold** and bold __bold__
+superscript2 superscript^2^
+subscript2 subscript~2~
+strikethrough ~~strikethrough~~">
+<meta name="author" content="Mohammad Ali Nilforooshan">
+<link rel="canonical" href="https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/">
+<meta name="google-site-verification" content="G-JH0F7W96MC">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nilforooshan.github.io/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nilforooshan.github.io/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nilforooshan.github.io/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nilforooshan.github.io/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nilforooshan.github.io/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/">
+  <meta property="og:site_name" content="Mohammad Ali Nilforooshan">
+  <meta property="og:title" content="RMarkdown cheat sheet">
+  <meta property="og:description" content="A basic YAML header to start with. Choose the desired output format.
+horizontal rule *** or ---
+Formatting Manual line break: End the line with two or more spaces.
+italic *italic* and italic _italic_
+bold **bold** and bold __bold__
+superscript2 superscript^2^
+subscript2 subscript~2~
+strikethrough ~~strikethrough~~">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:tag" content="R Markdown">
+      <meta property="og:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:title" content="RMarkdown cheat sheet">
+<meta name="twitter:description" content="A basic YAML header to start with.
+Choose the desired output format.
+
+
+horizontal rule *** or ---
+
+Formatting
+Manual line break: End the line with two or more spaces.
+italic *italic* and italic _italic_
+bold **bold** and bold __bold__
+superscript2 superscript^2^
+subscript2 subscript~2~
+strikethrough ~~strikethrough~~">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nilforooshan.github.io/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "RMarkdown cheat sheet",
+      "item": "https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "RMarkdown cheat sheet",
+  "name": "RMarkdown cheat sheet",
+  "description": "A basic YAML header to start with. Choose the desired output format.\nhorizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\nstrikethrough ~~strikethrough~~\n",
+  "keywords": [
+    "R Markdown"
+  ],
+  "articleBody": "A basic YAML header to start with. Choose the desired output format.\nhorizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\nstrikethrough ~~strikethrough~~\nlink [link](http://rmarkdown.rstudio.com)\nhttp://rmarkdown.rstudio.com Header 1 # Header 1 Header 2 ## Header 2 Header 3 ### Header 1 block quote \u003e block quote\nendash: – --\nemdash: — ---\nellipsis: … ...\nRoses are red. Roses are red.\nEquations (LaTeX) inline $equation$ inline $equation$\nDisplay equation $$ equation $$ $$ equation $$\nInsert Image image: image: ![](https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png)\nInserting a resized and centered image in the document:\nLists unordered list item 2 sub-item 1 sub-item 2 * unordered list * item 2 + sub-item 1 + sub-item 2 ordered list item 2 sub-item 1 sub-item 2 1. ordered list 2. item 2 + sub-item 1 + sub-item 2 Tables Table Header Second Header Table Cell Cell2 Cell 3 Cell4 Table Header | Second Header ------------- | ------------- Table Cell | Cell2 Cell 3 | Cell4 Codes This plain code is written inline.\nEvaluate the code inline.\nThere were `r nrow(cars)` cars studied. Show and evaluate the code.\nShow the code, but do not evaluate it.\nEmbed a plot.\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\ndisplay options option default effect eval TRUE Whether to evaluate the code and include its results echo TRUE Whether to display code along with its results warning TRUE Whether to display warnings error FALSE Whether to display errors message TRUE Whether to display messages tidy FALSE Whether to reformat code in a tidy way when displaying it results “markup” “markup”, “asis”, “hold”, or “hide” cache FALSE Whether to cache results for future renders comment “##” Comment character to preface results with fig.width 7 Width in inches for plots created in chunk fig.height 7 Height in inches for plots created in chunk For more details visit http://yihui.name/knitr/\nCentred text - PDF output only \\begin{center} centred text \\end{center} \\newline \\hfill Table of contents --- title: \"Sample Document\" output: html_document: toc: true theme: united --- It can be custmized further, such as toc_depth.\nIf you want to have the table of contents in a new page, drop toc and use some latex language.\n--- title: \"Title\" author: \"Name\" output: pdf_document --- \\newpage # adds new page after title \\tableofcontents # adds table of contents \\listoffigures \\listoftables \\newpage ",
+  "wordCount" : "422",
+  "inLanguage": "en",
+  "image": "https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished": "2024-10-25T00:00:00Z",
+  "dateModified": "2024-10-25T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Mohammad Ali Nilforooshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mohammad Ali Nilforooshan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nilforooshan.github.io/blog/favicon.ico"
+    }
+  }
+}
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nilforooshan.github.io/blog/" accesskey="h" title="Mohammad Ali Nilforooshan (Alt + H)">Mohammad Ali Nilforooshan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nilforooshan.github.io/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/" title="My website">
+                    <span>My website</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      RMarkdown cheat sheet
+    </h1>
+    <div class="post-meta"><span title='2024-10-25 00:00:00 +0000 UTC'>October 25, 2024</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan
+
+</div>
+  </header> 
+  <div class="post-content"><p>A basic YAML header to start with.
+Choose the desired output format.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>horizontal rule <code>***</code> or <code>---</code></p>
+<hr>
+<h3 id="formatting">Formatting<a hidden class="anchor" aria-hidden="true" href="#formatting">#</a></h3>
+<p>Manual line break: End the line with two or more spaces.</p>
+<p><em>italic</em> <code>*italic*</code> and <em>italic</em> <code>_italic_</code></p>
+<p><strong>bold</strong> <code>**bold**</code> and <strong>bold</strong> <code>__bold__</code></p>
+<p>superscript<!-- raw HTML omitted -->2<!-- raw HTML omitted --> <code>superscript^2^</code></p>
+<p>subscript<!-- raw HTML omitted -->2<!-- raw HTML omitted --> <code>subscript~2~</code></p>
+<p><del>strikethrough</del> <code>~~strikethrough~~</code></p>
+<p><a href="http://rmarkdown.rstudio.com">link</a> <code>[link](http://rmarkdown.rstudio.com)</code></p>
+<p><a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a> <code>&lt;http://rmarkdown.rstudio.com&gt;</code></p>
+<h1 id="header-1--header-1">Header 1 <code># Header 1</code><a hidden class="anchor" aria-hidden="true" href="#header-1--header-1">#</a></h1>
+<h2 id="header-2--header-2">Header 2 <code>## Header 2</code><a hidden class="anchor" aria-hidden="true" href="#header-2--header-2">#</a></h2>
+<h3 id="header-3--header-1">Header 3 <code>### Header 1</code><a hidden class="anchor" aria-hidden="true" href="#header-3--header-1">#</a></h3>
+<blockquote>
+<p>block quote <code>&gt; block quote</code></p>
+</blockquote>
+<p>endash: – <code>--</code></p>
+<p>emdash: — <code>---</code></p>
+<p>ellipsis: &hellip; <code>...</code></p>
+<p><!-- raw HTML omitted -->Roses are red.<!-- raw HTML omitted --> <code>&lt;span style=&quot;color:red&quot;&gt;Roses are red.&lt;/span&gt;</code></p>
+<h3 id="equations-latex">Equations (LaTeX)<a hidden class="anchor" aria-hidden="true" href="#equations-latex">#</a></h3>
+<p>inline $equation$ <code>inline $equation$</code></p>
+<p>Display equation <code>$$ equation $$</code> $$ equation $$</p>
+<h3 id="insert-image">Insert Image<a hidden class="anchor" aria-hidden="true" href="#insert-image">#</a></h3>
+<p>image: <img loading="lazy" src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png"></p>
+<p><code>image: ![](https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png)</code></p>
+<p>Inserting a resized and centered image in the document:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="lists">Lists<a hidden class="anchor" aria-hidden="true" href="#lists">#</a></h3>
+<ul>
+<li>unordered list</li>
+<li>item 2
+<ul>
+<li>sub-item 1</li>
+<li>sub-item 2</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>* unordered list  
+* item 2  
+    + sub-item 1  
+    + sub-item 2  
+</code></pre><ol>
+<li>ordered list</li>
+<li>item 2
+<ul>
+<li>sub-item 1</li>
+<li>sub-item 2</li>
+</ul>
+</li>
+</ol>
+<pre tabindex="0"><code>1. ordered list
+2. item 2
+     + sub-item 1
+     + sub-item 2
+</code></pre><h3 id="tables">Tables<a hidden class="anchor" aria-hidden="true" href="#tables">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Table Header</th>
+          <th>Second Header</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Table Cell</td>
+          <td>Cell2</td>
+      </tr>
+      <tr>
+          <td>Cell 3</td>
+          <td>Cell4</td>
+      </tr>
+  </tbody>
+</table>
+<pre tabindex="0"><code>Table Header  | Second Header
+------------- | -------------
+Table Cell    | Cell2
+Cell 3        | Cell4
+</code></pre><h3 id="codes">Codes<a hidden class="anchor" aria-hidden="true" href="#codes">#</a></h3>
+<p>This <code>plain code</code> is written inline.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Evaluate the code inline.</p>
+<pre tabindex="0"><code>There were `r nrow(cars)` cars studied.
+</code></pre><p>Show and evaluate the code.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Show the code, but do not evaluate it.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Embed  a plot.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<h3 id="display-options">display options<a hidden class="anchor" aria-hidden="true" href="#display-options">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>option</th>
+          <th>default</th>
+          <th>effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>eval</td>
+          <td>TRUE</td>
+          <td>Whether to evaluate the code and include its results</td>
+      </tr>
+      <tr>
+          <td>echo</td>
+          <td>TRUE</td>
+          <td>Whether to display code along with its results</td>
+      </tr>
+      <tr>
+          <td>warning</td>
+          <td>TRUE</td>
+          <td>Whether to display warnings</td>
+      </tr>
+      <tr>
+          <td>error</td>
+          <td>FALSE</td>
+          <td>Whether to display errors</td>
+      </tr>
+      <tr>
+          <td>message</td>
+          <td>TRUE</td>
+          <td>Whether to display messages</td>
+      </tr>
+      <tr>
+          <td>tidy</td>
+          <td>FALSE</td>
+          <td>Whether to reformat code in a tidy way when displaying it</td>
+      </tr>
+      <tr>
+          <td>results</td>
+          <td>&ldquo;markup&rdquo;</td>
+          <td>&ldquo;markup&rdquo;, &ldquo;asis&rdquo;, &ldquo;hold&rdquo;, or &ldquo;hide&rdquo;</td>
+      </tr>
+      <tr>
+          <td>cache</td>
+          <td>FALSE</td>
+          <td>Whether to cache results for future renders</td>
+      </tr>
+      <tr>
+          <td>comment</td>
+          <td>&ldquo;##&rdquo;</td>
+          <td>Comment character to preface results with</td>
+      </tr>
+      <tr>
+          <td>fig.width</td>
+          <td>7</td>
+          <td>Width in inches for plots created in chunk</td>
+      </tr>
+      <tr>
+          <td>fig.height</td>
+          <td>7</td>
+          <td>Height in inches for plots created in chunk</td>
+      </tr>
+  </tbody>
+</table>
+<p>For more details visit <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a></p>
+<hr>
+<h3 id="centred-text---pdf-output-only">Centred text - PDF output only<a hidden class="anchor" aria-hidden="true" href="#centred-text---pdf-output-only">#</a></h3>
+<pre tabindex="0"><code>\begin{center}
+centred text
+\end{center}
+</code></pre><pre tabindex="0"><code>\newline
+</code></pre><pre tabindex="0"><code>\hfill
+</code></pre><hr>
+<h3 id="table-of-contents">Table of contents<a hidden class="anchor" aria-hidden="true" href="#table-of-contents">#</a></h3>
+<pre tabindex="0"><code>---
+title: &#34;Sample Document&#34;
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+</code></pre><p>It can be custmized further, such as <code>toc_depth</code>.</p>
+<p>If you want to have the table of contents in a new page, drop <code>toc</code> and use some latex language.</p>
+<pre tabindex="0"><code>---
+title: &#34;Title&#34;
+author: &#34;Name&#34;
+output: pdf_document
+---
+
+\newpage # adds new page after title
+\tableofcontents # adds table of contents
+\listoffigures
+\listoftables
+\newpage
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nilforooshan.github.io/blog/tags/r-markdown/">R Markdown</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://nilforooshan.github.io/blog/">Mohammad Ali Nilforooshan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

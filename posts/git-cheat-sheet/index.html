@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>git cheat sheet | Mohammad Ali Nilforooshan</title>
+<meta name="keywords" content="git">
+<meta name="description" content="Clone a repository
+git clone &lt;sourse&gt;
+Clone a specific branch of a repository
+git clone -b &lt;branch&gt; &lt;sourse&gt;
+Create a local repository
+git init
+See the changed files since the last commit
+git status
+Add/remove all the current changes to the next commit
+git add .
+Commit the changes
+git commit -m &#34;message&#34;
+Give commit extra description
+git commit -m &#34;message
+
+Description&#34;
+See the changes to the tracked files
+git diff
+Compare a file between two branches">
+<meta name="author" content="Mohammad Ali Nilforooshan">
+<link rel="canonical" href="https://nilforooshan.github.io/blog/posts/git-cheat-sheet/">
+<meta name="google-site-verification" content="G-JH0F7W96MC">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nilforooshan.github.io/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nilforooshan.github.io/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nilforooshan.github.io/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nilforooshan.github.io/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nilforooshan.github.io/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nilforooshan.github.io/blog/posts/git-cheat-sheet/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://nilforooshan.github.io/blog/posts/git-cheat-sheet/">
+  <meta property="og:site_name" content="Mohammad Ali Nilforooshan">
+  <meta property="og:title" content="git cheat sheet">
+  <meta property="og:description" content="Clone a repository
+git clone &lt;sourse&gt; Clone a specific branch of a repository
+git clone -b &lt;branch&gt; &lt;sourse&gt; Create a local repository
+git init See the changed files since the last commit
+git status Add/remove all the current changes to the next commit
+git add . Commit the changes
+git commit -m &#34;message&#34; Give commit extra description
+git commit -m &#34;message Description&#34; See the changes to the tracked files
+git diff Compare a file between two branches">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-25T00:00:00+00:00">
+    <meta property="article:tag" content="Git">
+      <meta property="og:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:title" content="git cheat sheet">
+<meta name="twitter:description" content="Clone a repository
+git clone &lt;sourse&gt;
+Clone a specific branch of a repository
+git clone -b &lt;branch&gt; &lt;sourse&gt;
+Create a local repository
+git init
+See the changed files since the last commit
+git status
+Add/remove all the current changes to the next commit
+git add .
+Commit the changes
+git commit -m &#34;message&#34;
+Give commit extra description
+git commit -m &#34;message
+
+Description&#34;
+See the changes to the tracked files
+git diff
+Compare a file between two branches">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nilforooshan.github.io/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "git cheat sheet",
+      "item": "https://nilforooshan.github.io/blog/posts/git-cheat-sheet/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "git cheat sheet",
+  "name": "git cheat sheet",
+  "description": "Clone a repository\ngit clone \u0026lt;sourse\u0026gt; Clone a specific branch of a repository\ngit clone -b \u0026lt;branch\u0026gt; \u0026lt;sourse\u0026gt; Create a local repository\ngit init See the changed files since the last commit\ngit status Add/remove all the current changes to the next commit\ngit add . Commit the changes\ngit commit -m \u0026#34;message\u0026#34; Give commit extra description\ngit commit -m \u0026#34;message Description\u0026#34; See the changes to the tracked files\ngit diff Compare a file between two branches\n",
+  "keywords": [
+    "git"
+  ],
+  "articleBody": "Clone a repository\ngit clone Clone a specific branch of a repository\ngit clone -b Create a local repository\ngit init See the changed files since the last commit\ngit status Add/remove all the current changes to the next commit\ngit add . Commit the changes\ngit commit -m \"message\" Give commit extra description\ngit commit -m \"message Description\" See the changes to the tracked files\ngit diff Compare a file between two branches\ngit diff mybranch master -- myfile.cs See the log of the commited changes, starting from the most recent\ngit log See the log of the commited changes for a specific file\ngit log -p Discard the last commit\ngit reset --hard HEAD^ Discard the last 2 commits\ngit reset --hard HEAD^^ Reset to a specific commit and discard the more recent commits\ngit reset --hard Discard the last commit, but preserving the changes as unstaged changes\ngit reset HEAD^ There is also git revert for reverting back to a previous commit. It will undo changes up to the state before the specified commit ID. git revert is a new commit of a previous commit. It does not discard the latest commits. I found this useful:\ngit revert # We are interested in the commit before this one! # View the files. git reset --hard HEAD^ # Discard the previous revert (commit). This way is even better:\ngit checkout git switch - # Get back to the commit from which you checked out to (latest commit). Updating local files by downloading the latest changes\ngit pull Note that git pull is equivalent to git fetch \u0026\u0026 git merge.\nAdd a remote to a local repository\ngit remote add origin https://github.com//.git Update the remote address (change of repository name) in a local repository\ngit remote set-url origin https://github.com//.git To verify the remote:\ngit remote -v Push local changes to a remote\ngit push -u origin master List the existing branches; the current one is highlighted\ngit branch Create a new branch from the HEAD of the curent branch\ngit branch Note that git checkout -b is equivalent to git checkout -b and git branch \u0026\u0026 git checkout .\nCheck-out from the current branch and check-in to a new branch\ngit checkout Alternatively, use\ngit switch Optionally a new branch could be created with either -c or -C options.\nMoving to the master branch and merge the new branch with the master branch\ngit checkout master git merge Delete a branch\ngit branch -d Use tags to assign milestones such as v1, v1.1 and v2 to a commit. You may have one or multiple tags on a branch.\nList tags\ngit tag Add a tag to the last commit\ngit tag Push tags to GitHub\ngit push --tags Delete a tag locally\ngit tag -d Delete a locally deleted tag on GitHub\ngit push origin : Remove files that are not under version control\ngit clean -f -q To undo the effects of git add and unstage the staged changes, use git restore. Examples are:\ngit restore index.html # Undo the added cahnges to index.html git restore --staged index.html # Undo staged changes to index.html git restore --source 7173808e index.html # Restore index.html to the #7173808e commit Discard uncommitted changes to the README file\ngit checkout README Forgot to make a small change and made a commit? You can amend to the last commit (make changes to the last commit without making a new commit)\nYou can use the same command to change the commit message. If you have already pushed the commit to GitHub.com, you will have to force push a commit with an amended message (git push --force-with-lease origin BRANCHNAME).\ngit commit --amend -m \"MESSAGE\" Get rid of the deleted branches\ngit remote prune origin ",
+  "wordCount" : "655",
+  "inLanguage": "en",
+  "image": "https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished": "2024-10-25T00:00:00Z",
+  "dateModified": "2024-10-25T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Mohammad Ali Nilforooshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nilforooshan.github.io/blog/posts/git-cheat-sheet/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mohammad Ali Nilforooshan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nilforooshan.github.io/blog/favicon.ico"
+    }
+  }
+}
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nilforooshan.github.io/blog/" accesskey="h" title="Mohammad Ali Nilforooshan (Alt + H)">Mohammad Ali Nilforooshan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nilforooshan.github.io/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/" title="My website">
+                    <span>My website</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      git cheat sheet
+    </h1>
+    <div class="post-meta"><span title='2024-10-25 00:00:00 +0000 UTC'>October 25, 2024</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan
+
+</div>
+  </header> 
+  <div class="post-content"><p>Clone a repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone &lt;sourse&gt;
+</span></span></code></pre></div><p>Clone a specific branch of a repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone -b &lt;branch&gt; &lt;sourse&gt;
+</span></span></code></pre></div><p>Create a local repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>See the changed files since the last commit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git status
+</span></span></code></pre></div><p>Add/remove all the current changes to the next commit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div><p>Commit the changes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;message&#34;</span>
+</span></span></code></pre></div><p>Give commit extra description</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Description&#34;</span>
+</span></span></code></pre></div><p>See the changes to the tracked files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git diff
+</span></span></code></pre></div><p>Compare a file between two branches</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git diff mybranch master -- myfile.cs
+</span></span></code></pre></div><p>See the log of the commited changes, starting from the most recent</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git log
+</span></span></code></pre></div><p>See the log of the commited changes for a specific file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git log -p &lt;filename&gt;
+</span></span></code></pre></div><p>Discard the last commit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git reset --hard HEAD^
+</span></span></code></pre></div><p>Discard the last 2 commits</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git reset --hard HEAD^^
+</span></span></code></pre></div><p>Reset to a specific commit and discard the more recent commits</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git reset --hard &lt;commit ID&gt;
+</span></span></code></pre></div><p>Discard the last commit, but preserving the changes as unstaged changes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git reset HEAD^
+</span></span></code></pre></div><p>There is also <code>git revert</code> for reverting back to a previous commit.
+It will undo changes up to the state before the specified commit ID.
+<code>git revert</code> is a new commit of a previous commit.
+It does not discard the latest commits.
+I found this useful:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git revert &lt;commit ID&gt; <span style="color:#75715e"># We are interested in the commit before this one!</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># View the files.</span>
+</span></span><span style="display:flex;"><span>git reset --hard HEAD^ <span style="color:#75715e"># Discard the previous revert (commit).</span>
+</span></span></code></pre></div><p>This way is even better:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git checkout &lt;previous commit ID&gt;
+</span></span><span style="display:flex;"><span>git switch - <span style="color:#75715e"># Get back to the commit from which you checked out to &lt;previous commit ID&gt; (latest commit).</span>
+</span></span></code></pre></div><p>Updating local files by downloading the latest changes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git pull &lt;remote&gt; &lt;branch&gt;
+</span></span></code></pre></div><p>Note that <code>git pull</code> is equivalent to <code>git fetch &amp;&amp; git merge</code>.</p>
+<p>Add a remote to a local repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote add origin https://github.com/&lt;user&gt;/&lt;repo&gt;.git
+</span></span></code></pre></div><p>Update the remote address (change of repository name) in a local repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote set-url origin https://github.com/&lt;user&gt;/&lt;repo&gt;.git
+</span></span></code></pre></div><p>To verify the remote:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote -v
+</span></span></code></pre></div><p>Push local changes to a remote</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git push -u origin master
+</span></span></code></pre></div><p>List the existing branches; the current one is highlighted</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><p>Create a new branch from the HEAD of the curent branch</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git branch &lt;branchname&gt;
+</span></span></code></pre></div><p>Note that <code>git checkout -b &lt;new-branch&gt;</code> is equivalent to <code>git checkout -b &lt;new-branch&gt; &lt;existing-branch&gt;</code> and <code>git branch &lt;new-branch&gt; &amp;&amp; git checkout &lt;new-branch&gt;</code>.</p>
+<p>Check-out from the current branch and check-in to a new branch</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git checkout &lt;branchname&gt;
+</span></span></code></pre></div><p>Alternatively, use</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git switch &lt;branch&gt;
+</span></span></code></pre></div><p>Optionally a new branch could be created with either <code>-c</code> or <code>-C</code> options.</p>
+<p>Moving to the master branch and merge the new branch with the master branch</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git checkout master
+</span></span><span style="display:flex;"><span>git merge &lt;branchname&gt;
+</span></span></code></pre></div><p>Delete a branch</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git branch -d &lt;branchname&gt;
+</span></span></code></pre></div><p>Use tags to assign milestones such as v1, v1.1 and v2 to a commit. You may have one or multiple tags on a branch.</p>
+<p>List tags</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git tag
+</span></span></code></pre></div><p>Add a tag to the last commit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git tag &lt;tagname&gt;
+</span></span></code></pre></div><p>Push tags to GitHub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git push --tags
+</span></span></code></pre></div><p>Delete a tag locally</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git tag -d &lt;tagname&gt;
+</span></span></code></pre></div><p>Delete a locally deleted tag on GitHub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git push origin :&lt;tagname&gt;
+</span></span></code></pre></div><p>Remove files that are not under version control</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clean -f -q
+</span></span></code></pre></div><p>To undo the effects of <code>git add</code> and unstage the staged changes, use <code>git restore</code>. Examples are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git restore index.html <span style="color:#75715e"># Undo the added cahnges to index.html</span>
+</span></span><span style="display:flex;"><span>git restore --staged index.html <span style="color:#75715e"># Undo staged changes to index.html</span>
+</span></span><span style="display:flex;"><span>git restore --source 7173808e index.html <span style="color:#75715e"># Restore index.html to the #7173808e commit</span>
+</span></span></code></pre></div><p>Discard uncommitted changes to the README file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git checkout README
+</span></span></code></pre></div><p>Forgot to make a small change and made a commit?
+You can amend to the last commit (make changes to the last commit without making a new commit)</p>
+<p>You can use the same command to change the commit message.
+If you have already pushed the commit to GitHub.com, you will have to force push a commit with an amended message (<code>git push --force-with-lease origin BRANCHNAME</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git commit --amend -m <span style="color:#e6db74">&#34;MESSAGE&#34;</span>
+</span></span></code></pre></div><p>Get rid of the deleted branches</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote prune origin
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nilforooshan.github.io/blog/tags/git/">Git</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://nilforooshan.github.io/blog/">Mohammad Ali Nilforooshan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -143,7 +143,7 @@ Mario
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;prices &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Price&amp;#39;&lt;/span&gt;])
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(dates, prices)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;Alt text&#34; loading=&#34;lazy&#34; src=&#34;https://nilforooshan.github.io/blog/images/Polars-Tutorial-img1.png&#34;&gt;&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../../images/Polars-Tutorial-img1.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Polars Tutorial2</title>

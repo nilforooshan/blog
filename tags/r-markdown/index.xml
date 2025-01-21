@@ -20,17 +20,28 @@
       <guid>https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/</guid>
       <description>&lt;p&gt;A basic YAML header to start with.
 Choose the desired output format.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;
+---
+title: &#34;RMarkdown Example&#34;
+author: &#34;Mohammad Ali Nilforooshan&#34;
+date: &#34;6 August 2017&#34;
+output: html_document
+# output: pdf_document
+# output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+&lt;/pre&gt;
 &lt;p&gt;horizontal rule &lt;code&gt;***&lt;/code&gt; or &lt;code&gt;---&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;formatting&#34;&gt;Formatting&lt;/h3&gt;
 &lt;p&gt;Manual line break: End the line with two or more spaces.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;italic&lt;/em&gt; &lt;code&gt;*italic*&lt;/code&gt; and &lt;em&gt;italic&lt;/em&gt; &lt;code&gt;_italic_&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bold&lt;/strong&gt; &lt;code&gt;**bold**&lt;/code&gt; and &lt;strong&gt;bold&lt;/strong&gt; &lt;code&gt;__bold__&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;superscript&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; &lt;code&gt;superscript^2^&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;subscript&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; &lt;code&gt;subscript~2~&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;strikethrough&lt;/del&gt; &lt;code&gt;~~strikethrough~~&lt;/code&gt;&lt;/p&gt;</description>
+&lt;p&gt;superscript&lt;sup&gt;2&lt;/sup&gt; &lt;code&gt;superscript^2^&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;subscript&lt;sub&gt;2&lt;/sub&gt; &lt;code&gt;subscript~2~&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

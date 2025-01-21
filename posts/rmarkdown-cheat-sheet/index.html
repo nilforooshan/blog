@@ -10,6 +10,18 @@
 <meta name="description" content="A basic YAML header to start with.
 Choose the desired output format.
 
+---
+title: &#34;RMarkdown Example&#34;
+author: &#34;Mohammad Ali Nilforooshan&#34;
+date: &#34;6 August 2017&#34;
+output: html_document
+# output: pdf_document
+# output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 horizontal rule *** or ---
 
@@ -18,8 +30,7 @@ Manual line break: End the line with two or more spaces.
 italic *italic* and italic _italic_
 bold **bold** and bold __bold__
 superscript2 superscript^2^
-subscript2 subscript~2~
-strikethrough ~~strikethrough~~">
+subscript2 subscript~2~">
 <meta name="author" content="Mohammad Ali Nilforooshan">
 <link rel="canonical" href="https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/">
 <link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
@@ -85,13 +96,12 @@ strikethrough ~~strikethrough~~">
   <meta property="og:site_name" content="Mohammad Ali Nilforooshan">
   <meta property="og:title" content="RMarkdown cheat sheet">
   <meta property="og:description" content="A basic YAML header to start with. Choose the desired output format.
-horizontal rule *** or ---
+--- title: &#34;RMarkdown Example&#34; author: &#34;Mohammad Ali Nilforooshan&#34; date: &#34;6 August 2017&#34; output: html_document # output: pdf_document # output: word_document --- ```{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE) ``` horizontal rule *** or ---
 Formatting Manual line break: End the line with two or more spaces.
 italic *italic* and italic _italic_
 bold **bold** and bold __bold__
 superscript2 superscript^2^
-subscript2 subscript~2~
-strikethrough ~~strikethrough~~">
+subscript2 subscript~2~">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -105,6 +115,18 @@ strikethrough ~~strikethrough~~">
 <meta name="twitter:description" content="A basic YAML header to start with.
 Choose the desired output format.
 
+---
+title: &#34;RMarkdown Example&#34;
+author: &#34;Mohammad Ali Nilforooshan&#34;
+date: &#34;6 August 2017&#34;
+output: html_document
+# output: pdf_document
+# output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 horizontal rule *** or ---
 
@@ -113,8 +135,7 @@ Manual line break: End the line with two or more spaces.
 italic *italic* and italic _italic_
 bold **bold** and bold __bold__
 superscript2 superscript^2^
-subscript2 subscript~2~
-strikethrough ~~strikethrough~~">
+subscript2 subscript~2~">
 
 
 <script type="application/ld+json">
@@ -143,12 +164,12 @@ strikethrough ~~strikethrough~~">
   "@type": "BlogPosting",
   "headline": "RMarkdown cheat sheet",
   "name": "RMarkdown cheat sheet",
-  "description": "A basic YAML header to start with. Choose the desired output format.\nhorizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\nstrikethrough ~~strikethrough~~\n",
+  "description": "A basic YAML header to start with. Choose the desired output format.\n--- title: \"RMarkdown Example\" author: \"Mohammad Ali Nilforooshan\" date: \"6 August 2017\" output: html_document # output: pdf_document # output: word_document --- ```{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE) ``` horizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\n",
   "keywords": [
     "R Markdown"
   ],
-  "articleBody": "A basic YAML header to start with. Choose the desired output format.\nhorizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\nstrikethrough ~~strikethrough~~\nlink [link](http://rmarkdown.rstudio.com)\nhttp://rmarkdown.rstudio.com Header 1 # Header 1 Header 2 ## Header 2 Header 3 ### Header 1 block quote \u003e block quote\nendash: – --\nemdash: — ---\nellipsis: … ...\nRoses are red. Roses are red.\nEquations (LaTeX) inline $equation$ inline $equation$\nDisplay equation $$ equation $$ $$ equation $$\nInsert Image image: image: ![](https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png)\nInserting a resized and centered image in the document:\nLists unordered list item 2 sub-item 1 sub-item 2 * unordered list * item 2 + sub-item 1 + sub-item 2 ordered list item 2 sub-item 1 sub-item 2 1. ordered list 2. item 2 + sub-item 1 + sub-item 2 Tables Table Header Second Header Table Cell Cell2 Cell 3 Cell4 Table Header | Second Header ------------- | ------------- Table Cell | Cell2 Cell 3 | Cell4 Codes This plain code is written inline.\nEvaluate the code inline.\nThere were `r nrow(cars)` cars studied. Show and evaluate the code.\nShow the code, but do not evaluate it.\nEmbed a plot.\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\ndisplay options option default effect eval TRUE Whether to evaluate the code and include its results echo TRUE Whether to display code along with its results warning TRUE Whether to display warnings error FALSE Whether to display errors message TRUE Whether to display messages tidy FALSE Whether to reformat code in a tidy way when displaying it results “markup” “markup”, “asis”, “hold”, or “hide” cache FALSE Whether to cache results for future renders comment “##” Comment character to preface results with fig.width 7 Width in inches for plots created in chunk fig.height 7 Height in inches for plots created in chunk For more details visit http://yihui.name/knitr/\nCentred text - PDF output only \\begin{center} centred text \\end{center} \\newline \\hfill Table of contents --- title: \"Sample Document\" output: html_document: toc: true theme: united --- It can be custmized further, such as toc_depth.\nIf you want to have the table of contents in a new page, drop toc and use some latex language.\n--- title: \"Title\" author: \"Name\" output: pdf_document --- \\newpage # adds new page after title \\tableofcontents # adds table of contents \\listoffigures \\listoftables \\newpage ",
-  "wordCount" : "422",
+  "articleBody": "A basic YAML header to start with. Choose the desired output format.\n--- title: \"RMarkdown Example\" author: \"Mohammad Ali Nilforooshan\" date: \"6 August 2017\" output: html_document # output: pdf_document # output: word_document --- ```{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE) ``` horizontal rule *** or ---\nFormatting Manual line break: End the line with two or more spaces.\nitalic *italic* and italic _italic_\nbold **bold** and bold __bold__\nsuperscript2 superscript^2^\nsubscript2 subscript~2~\nstrikethrough ~~strikethrough~~\nlink [link](http://rmarkdown.rstudio.com)\nhttp://rmarkdown.rstudio.com Header 1 # Header 1 Header 2 ## Header 2 Header 3 ### Header 1 block quote \u003e block quote\nendash: – --\nemdash: — ---\nellipsis: … ...\nRoses are red. Roses are red.\nEquations (LaTeX) inline $equation$ inline $equation$\nDisplay equation $$ equation $$ $$ equation $$\nInsert Image image: image: ![](https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png)\nInserting a resized and centered image in the document:\n``` {r, out.width = \"120px\", echo=FALSE, fig.align='center'} knitr::include_graphics(\"imsage.png\") ``` Lists unordered list item 2 sub-item 1 sub-item 2 * unordered list * item 2 + sub-item 1 + sub-item 2 ordered list item 2 sub-item 1 sub-item 2 1. ordered list 2. item 2 + sub-item 1 + sub-item 2 Tables Table Header Second Header Table Cell Cell2 Cell 3 Cell4 Table Header | Second Header ------------- | ------------- Table Cell | Cell2 Cell 3 | Cell4 Codes This plain code is written inline.\nThis `plain code` is written inline. ``` This is a plain code block. ``` Evaluate the code inline.\nThere were `r nrow(cars)` cars studied. Show and evaluate the code.\n```{r cars} summary(cars) ``` Show the code, but do not evaluate it.\n```{r eval=FALSE} print(\"Don't run me\") ``` Embed a plot.\n```{r pressure, echo=FALSE} plot(pressure) ``` Note that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.\ndisplay options option default effect eval TRUE Whether to evaluate the code and include its results echo TRUE Whether to display code along with its results warning TRUE Whether to display warnings error FALSE Whether to display errors message TRUE Whether to display messages tidy FALSE Whether to reformat code in a tidy way when displaying it results “markup” “markup”, “asis”, “hold”, or “hide” cache FALSE Whether to cache results for future renders comment “##” Comment character to preface results with fig.width 7 Width in inches for plots created in chunk fig.height 7 Height in inches for plots created in chunk For more details visit http://yihui.name/knitr/\nCentred text - PDF output only \\begin{center} centred text \\end{center} \\newline \\hfill Table of contents --- title: \"Sample Document\" output: html_document: toc: true theme: united --- It can be custmized further, such as toc_depth.\nIf you want to have the table of contents in a new page, drop toc and use some latex language.\n--- title: \"Title\" author: \"Name\" output: pdf_document --- \\newpage # adds new page after title \\tableofcontents # adds table of contents \\listoffigures \\listoftables \\newpage ",
+  "wordCount" : "488",
   "inLanguage": "en",
   "image": "https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished": "2024-10-25T00:00:00Z",
   "dateModified": "2024-10-25T00:00:00Z",
@@ -288,16 +309,28 @@ strikethrough ~~strikethrough~~">
   </header> 
   <div class="post-content"><p>A basic YAML header to start with.
 Choose the desired output format.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+---
+title: "RMarkdown Example"
+author: "Mohammad Ali Nilforooshan"
+date: "6 August 2017"
+output: html_document
+# output: pdf_document
+# output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+</pre>
 <p>horizontal rule <code>***</code> or <code>---</code></p>
 <hr>
 <h3 id="formatting">Formatting<a hidden class="anchor" aria-hidden="true" href="#formatting">#</a></h3>
 <p>Manual line break: End the line with two or more spaces.</p>
 <p><em>italic</em> <code>*italic*</code> and <em>italic</em> <code>_italic_</code></p>
 <p><strong>bold</strong> <code>**bold**</code> and <strong>bold</strong> <code>__bold__</code></p>
-<p>superscript<!-- raw HTML omitted -->2<!-- raw HTML omitted --> <code>superscript^2^</code></p>
-<p>subscript<!-- raw HTML omitted -->2<!-- raw HTML omitted --> <code>subscript~2~</code></p>
+<p>superscript<sup>2</sup> <code>superscript^2^</code></p>
+<p>subscript<sub>2</sub> <code>subscript~2~</code></p>
 <p><del>strikethrough</del> <code>~~strikethrough~~</code></p>
 <p><a href="http://rmarkdown.rstudio.com">link</a> <code>[link](http://rmarkdown.rstudio.com)</code></p>
 <p><a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a> <code>&lt;http://rmarkdown.rstudio.com&gt;</code></p>
@@ -310,7 +343,7 @@ Choose the desired output format.</p>
 <p>endash: – <code>--</code></p>
 <p>emdash: — <code>---</code></p>
 <p>ellipsis: &hellip; <code>...</code></p>
-<p><!-- raw HTML omitted -->Roses are red.<!-- raw HTML omitted --> <code>&lt;span style=&quot;color:red&quot;&gt;Roses are red.&lt;/span&gt;</code></p>
+<p><span style="color:red">Roses are red.</span> <code>&lt;span style=&quot;color:red&quot;&gt;Roses are red.&lt;/span&gt;</code></p>
 <h3 id="equations-latex">Equations (LaTeX)<a hidden class="anchor" aria-hidden="true" href="#equations-latex">#</a></h3>
 <p>inline $equation$ <code>inline $equation$</code></p>
 <p>Display equation <code>$$ equation $$</code> $$ equation $$</p>
@@ -318,8 +351,12 @@ Choose the desired output format.</p>
 <p>image: <img loading="lazy" src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png"></p>
 <p><code>image: ![](https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-125.png)</code></p>
 <p>Inserting a resized and centered image in the document:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```
+{r, out.width = "120px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("imsage.png")
+```
+</pre>
 <h3 id="lists">Lists<a hidden class="anchor" aria-hidden="true" href="#lists">#</a></h3>
 <ul>
 <li>unordered list</li>
@@ -372,20 +409,32 @@ Table Cell    | Cell2
 Cell 3        | Cell4
 </code></pre><h3 id="codes">Codes<a hidden class="anchor" aria-hidden="true" href="#codes">#</a></h3>
 <p>This <code>plain code</code> is written inline.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre> This `plain code` is written inline. </pre>
+<pre>
+```
+This is a plain code block.
+```
+</pre>
 <p>Evaluate the code inline.</p>
 <pre tabindex="0"><code>There were `r nrow(cars)` cars studied.
 </code></pre><p>Show and evaluate the code.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```{r cars}
+summary(cars)
+```
+</pre>
 <p>Show the code, but do not evaluate it.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```{r eval=FALSE}
+print("Don't run me")
+```
+</pre>
 <p>Embed  a plot.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+</pre>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 <h3 id="display-options">display options<a hidden class="anchor" aria-hidden="true" href="#display-options">#</a></h3>
 <table>

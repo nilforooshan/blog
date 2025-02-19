@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Miscellaneous on Mohammad Ali Nilforooshan</title>
+    <link>https://nilforooshan.github.io/blog/tags/miscellaneous/</link>
+    <description>Recent content in Miscellaneous on Mohammad Ali Nilforooshan</description>
+    <image>
+      <title>Mohammad Ali Nilforooshan</title>
+      <url>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nilforooshan.github.io/blog/tags/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrated from Jekyll to Hugo</title>
+      <link>https://nilforooshan.github.io/blog/posts/jekyll2hugo/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/jekyll2hugo/</guid>
+      <description>&lt;h2 id=&#34;jekyll-and-the-issues-around-it&#34;&gt;Jekyll and the Issues Around It&lt;/h2&gt;
+&lt;p&gt;I started this blog using Jekyll.
+First, I had to learn about Jekyll and how to write and maintain a blog with it.
+There was definitely a learning curve, but with tons of resources online, it wasn&amp;rsquo;t a huge deal.
+The real issue was installing and getting Jekyll to work.
+Jekyll is Ruby-based, with a bunch of dependencies like Ruby itself, RVM, Bundler, and gems.
+Mismatches between these dependencies can stop Jekyll from installing (like, the OS might be missing some stuff or can&amp;rsquo;t put together compatible dependencies) or even from working later (like after an OS update).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

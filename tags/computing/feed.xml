@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.140.2</generator>
     <language>en</language>
     <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nilforooshan.github.io/blog/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nilforooshan.github.io/blog/tags/computing/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding SWAP and RAM disk</title>
       <link>https://nilforooshan.github.io/blog/posts/swap-ramdisk/</link>

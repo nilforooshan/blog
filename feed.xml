@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Python on Mohammad Ali Nilforooshan</title>
-    <link>https://nilforooshan.github.io/blog/tags/python/</link>
-    <description>Recent content in Python on Mohammad Ali Nilforooshan</description>
+    <title>Mohammad Ali Nilforooshan</title>
+    <link>https://nilforooshan.github.io/blog/</link>
+    <description>Recent content on Mohammad Ali Nilforooshan</description>
     <image>
       <title>Mohammad Ali Nilforooshan</title>
       <url>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -11,8 +11,82 @@
     </image>
     <generator>Hugo -- 0.140.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nilforooshan.github.io/blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nilforooshan.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrated from Jekyll to Hugo</title>
+      <link>https://nilforooshan.github.io/blog/posts/jekyll2hugo/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/jekyll2hugo/</guid>
+      <description>&lt;h2 id=&#34;jekyll-and-the-issues-around-it&#34;&gt;Jekyll and the Issues Around It&lt;/h2&gt;
+&lt;p&gt;I started this blog using Jekyll.
+First, I had to learn about Jekyll and how to write and maintain a blog with it.
+There was definitely a learning curve, but with tons of resources online, it wasn&amp;rsquo;t a huge deal.
+The real issue was installing and getting Jekyll to work.
+Jekyll is Ruby-based, with a bunch of dependencies like Ruby itself, RVM, Bundler, and gems.
+Mismatches between these dependencies can stop Jekyll from installing (like, the OS might be missing some stuff or can&amp;rsquo;t put together compatible dependencies) or even from working later (like after an OS update).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding SWAP and RAM disk</title>
+      <link>https://nilforooshan.github.io/blog/posts/swap-ramdisk/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/swap-ramdisk/</guid>
+      <description>&lt;p&gt;I was familiar with the concept of SWAP in memory management until recently when I became familiar with the concept of &amp;ldquo;RAM disk&amp;rdquo;.
+In this blog post, I introduce both briefly.&lt;/p&gt;
+&lt;p&gt;In computing, memory management is critical to ensuring smooth performance and efficiency, especially as applications become more demanding.
+Two strategies, SWAP and RAM disk, help manage memory resources, albeit in very different ways.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-swap&#34;&gt;What is SWAP?&lt;/h2&gt;
+&lt;p&gt;SWAP, also known as swap space or swap memory, is a dedicated portion of disk storage set aside to act as an extension of a system&amp;rsquo;s physical memory (RAM).
+When a computer&amp;rsquo;s RAM is nearly full, the operating system can transfer some data from RAM to the SWAP area to avoid performance bottlenecks when RAM is under pressure.
+When the RAM cannot accommodate many programs and heavy applications, less active data is moved from the RAM to the SWAP space on the hard drive or SSD.
+This allows the system to continue running without immediate slowdowns.
+If that data is needed again, it&amp;rsquo;s &amp;ldquo;swapped in&amp;rdquo;, returning to RAM while another, less-needed piece of data may be swapped out.
+It should be noted that SWAP is considerably slower than RAM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>git cheat sheet</title>
+      <link>https://nilforooshan.github.io/blog/posts/git-cheat-sheet/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/git-cheat-sheet/</guid>
+      <description>&lt;p&gt;Clone a repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone &amp;lt;sourse&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Clone a specific branch of a repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone -b &amp;lt;branch&amp;gt; &amp;lt;sourse&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create a local repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See the changed files since the last commit&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add/remove all the current changes to the next commit&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Commit the changes&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Give commit extra description&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;message
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Description&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See the changes to the tracked files&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git diff
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Compare a file between two branches&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>git quick start</title>
+      <link>https://nilforooshan.github.io/blog/posts/git-quick-start/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/git-quick-start/</guid>
+      <description>&lt;p&gt;Create a new repository on the command line.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;# repository&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -M main
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add origin https://github.com/&amp;lt;USER&amp;gt;/&amp;lt;REPONAME&amp;gt;.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push -u origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or push an existing repository from the command line.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote add origin https://github.com/&amp;lt;USER&amp;gt;/&amp;lt;REPONAME&amp;gt;.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch -M main
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push -u origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Polars Tutorial</title>
       <link>https://nilforooshan.github.io/blog/posts/polars-tutorial/</link>
@@ -861,6 +935,115 @@ shape: (2, 4)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_numpy()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(b))
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[10  9  8 20]
 &lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>RMarkdown cheat sheet</title>
+      <link>https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/rmarkdown-cheat-sheet/</guid>
+      <description>&lt;p&gt;A basic YAML header to start with.
+Choose the desired output format.&lt;/p&gt;
+&lt;pre&gt;
+---
+title: &#34;RMarkdown Example&#34;
+author: &#34;Mohammad Ali Nilforooshan&#34;
+date: &#34;6 August 2017&#34;
+output: html_document
+# output: pdf_document
+# output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+&lt;/pre&gt;
+&lt;p&gt;horizontal rule &lt;code&gt;***&lt;/code&gt; or &lt;code&gt;---&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;formatting&#34;&gt;Formatting&lt;/h3&gt;
+&lt;p&gt;Manual line break: End the line with two or more spaces.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;italic&lt;/em&gt; &lt;code&gt;*italic*&lt;/code&gt; and &lt;em&gt;italic&lt;/em&gt; &lt;code&gt;_italic_&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;bold&lt;/strong&gt; &lt;code&gt;**bold**&lt;/code&gt; and &lt;strong&gt;bold&lt;/strong&gt; &lt;code&gt;__bold__&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;superscript&lt;sup&gt;2&lt;/sup&gt; &lt;code&gt;superscript^2^&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;subscript&lt;sub&gt;2&lt;/sub&gt; &lt;code&gt;subscript~2~&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Set git configuration variables</title>
+      <link>https://nilforooshan.github.io/blog/posts/set-git-configuration-variables/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/set-git-configuration-variables/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.email &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user@email.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.password &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TOKEN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global core.editor &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vim&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To see the Git configures do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use crediential helper so that Git does not ask for username and password (token) every time.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global crediential.helper cache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To unset the above (e.g., using a new token) do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global --unset crediential.helper
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>What does heritability do in BLUP?</title>
+      <link>https://nilforooshan.github.io/blog/posts/h2/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/h2/</guid>
+      <description>&lt;p&gt;Heritability ($\text h^2$) has biological and statistical definitions.
+Statistically, heritability is the proportion of the phenotypic variation explained by the genetic variation in the population.
+Let&amp;rsquo;s start with an example!
+I took example 3.1 from &lt;a href=&#34;https://www.cabidigitallibrary.org/doi/book/10.1079/9780851990002.0000&#34;&gt;Mrode (2005)&lt;/a&gt;.
+This example is about estimating fixed effects (sex) solutions and predicting breeding values of animals for pre-weaning gain (WWG) of beef calves.
+The data is presented in the following table:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Calf&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Sex&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Sire&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Dam&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;WWG (kg)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Male&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Unknown&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4.5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Female&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;2.9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;6&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Female&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3.9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Male&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3.5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Male&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;6&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;5.0&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In an Animal Model BLUP, the inverse of the relationship matrix ($\mathbf A^{-1}$) is multiplied by $\lambda = (1 - \text h^2)/\text h^2$ (equal to $(4 - \text h^2)/\text h^2$ in a Sire Model BLUP).
+Considering $\text h^2$ = 1/3 (λ = 2), the following solutions are obtained from BLUP:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

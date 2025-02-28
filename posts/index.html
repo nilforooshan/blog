@@ -210,6 +210,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">An R function for MAF calculation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Here, I introduce an R function for calculating minor allele frequencies (MAF).
+calcmaf &lt;- function(M, col1ID = TRUE) { if(col1ID) { maf = colMeans(M[,-1])/2 } else { maf = colMeans(M)/2 } maf[maf &gt; 0.5] &lt;- 1 - maf[maf &gt; 0.5] return(unname(maf)) } The calcMAF function takes arguments M and col1ID. M is the genotype data frame with genotypes coded as 0:2. col1ID takes TRUE or FALSE. If TRUE (default) the 1st column of M is animal ID.
+Let’s create an example genotype data frame for 10 genotypes and 20 SNPs, where the first column is animal ID.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-28 00:00:00 +0000 UTC'>February 28, 2025</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan</footer>
+  <a class="entry-link" aria-label="post link to An R function for MAF calculation" href="https://nilforooshan.github.io/blog/posts/calcmaf/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Migrated from Jekyll to Hugo
     </h2>
   </header>

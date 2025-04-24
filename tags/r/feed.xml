@@ -11,8 +11,18 @@
     </image>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/tags/r/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick Tip: Calculating Genotype Frequencies</title>
+      <link>https://nilforooshan.github.io/blog/posts/calc_geno_freq/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/calc_geno_freq/</guid>
+      <description>&lt;p&gt;In this short blog post, I&amp;rsquo;m gonna show you a super simple way to calculate genotype frequencies.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say we&amp;rsquo;re looking at a single spot in the DNA (a biallelic situation) with two possible versions, &amp;ldquo;A&amp;rdquo; and &amp;ldquo;a&amp;rdquo;.
+That means we can have three possible genotype combos: &amp;ldquo;AA&amp;rdquo;, &amp;ldquo;Aa&amp;rdquo;, and &amp;ldquo;aa&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;What we want to do is count how many times each of these genotypes shows up at each SNP.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>An R function for MAF calculation</title>
       <link>https://nilforooshan.github.io/blog/posts/calcmaf/</link>

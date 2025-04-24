@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir=" auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Quick Tip: Calculating Genotype Frequencies | Mohammad Ali Nilforooshan</title>
+<meta name="keywords" content="R, Quantitative Genetics">
+<meta name="description" content="In this short blog post, I&rsquo;m gonna show you a super simple way to calculate genotype frequencies.
+Let&rsquo;s say we&rsquo;re looking at a single spot in the DNA (a biallelic situation) with two possible versions, &ldquo;A&rdquo; and &ldquo;a&rdquo;.
+That means we can have three possible genotype combos: &ldquo;AA&rdquo;, &ldquo;Aa&rdquo;, and &ldquo;aa&rdquo;.
+What we want to do is count how many times each of these genotypes shows up at each SNP.">
+<meta name="author" content="Mohammad Ali Nilforooshan">
+<link rel="canonical" href="https://nilforooshan.github.io/blog/posts/calc_geno_freq/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://nilforooshan.github.io/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nilforooshan.github.io/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nilforooshan.github.io/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nilforooshan.github.io/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nilforooshan.github.io/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nilforooshan.github.io/blog/posts/calc_geno_freq/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH0F7W96MC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JH0F7W96MC');
+        }
+      </script><meta property="og:url" content="https://nilforooshan.github.io/blog/posts/calc_geno_freq/">
+  <meta property="og:site_name" content="Mohammad Ali Nilforooshan">
+  <meta property="og:title" content="Quick Tip: Calculating Genotype Frequencies">
+  <meta property="og:description" content="In this short blog post, I’m gonna show you a super simple way to calculate genotype frequencies.
+Let’s say we’re looking at a single spot in the DNA (a biallelic situation) with two possible versions, “A” and “a”. That means we can have three possible genotype combos: “AA”, “Aa”, and “aa”.
+What we want to do is count how many times each of these genotypes shows up at each SNP.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-24T00:00:00+00:00">
+    <meta property="article:tag" content="R">
+    <meta property="article:tag" content="Quantitative Genetics">
+      <meta property="og:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name="twitter:title" content="Quick Tip: Calculating Genotype Frequencies">
+<meta name="twitter:description" content="In this short blog post, I&rsquo;m gonna show you a super simple way to calculate genotype frequencies.
+Let&rsquo;s say we&rsquo;re looking at a single spot in the DNA (a biallelic situation) with two possible versions, &ldquo;A&rdquo; and &ldquo;a&rdquo;.
+That means we can have three possible genotype combos: &ldquo;AA&rdquo;, &ldquo;Aa&rdquo;, and &ldquo;aa&rdquo;.
+What we want to do is count how many times each of these genotypes shows up at each SNP.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://nilforooshan.github.io/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Quick Tip: Calculating Genotype Frequencies",
+      "item": "https://nilforooshan.github.io/blog/posts/calc_geno_freq/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Quick Tip: Calculating Genotype Frequencies",
+  "name": "Quick Tip: Calculating Genotype Frequencies",
+  "description": "In this short blog post, I\u0026rsquo;m gonna show you a super simple way to calculate genotype frequencies.\nLet\u0026rsquo;s say we\u0026rsquo;re looking at a single spot in the DNA (a biallelic situation) with two possible versions, \u0026ldquo;A\u0026rdquo; and \u0026ldquo;a\u0026rdquo;. That means we can have three possible genotype combos: \u0026ldquo;AA\u0026rdquo;, \u0026ldquo;Aa\u0026rdquo;, and \u0026ldquo;aa\u0026rdquo;.\nWhat we want to do is count how many times each of these genotypes shows up at each SNP.\n",
+  "keywords": [
+    "R", "Quantitative Genetics"
+  ],
+  "articleBody": "In this short blog post, I’m gonna show you a super simple way to calculate genotype frequencies.\nLet’s say we’re looking at a single spot in the DNA (a biallelic situation) with two possible versions, “A” and “a”. That means we can have three possible genotype combos: “AA”, “Aa”, and “aa”.\nWhat we want to do is count how many times each of these genotypes shows up at each SNP.\nLet’s create a random genotype matrix for 10 genotyped animals and 20 SNPs.\nset.seed(995) (M \u003c- matrix(c(sample(0:2, 200, replace = TRUE)), nrow = 10)) Which gives us:\n[,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14] [,15] [,16] [,17] [,18] [,19] [,20] [1,] 2 0 2 1 0 2 1 1 1 0 1 1 2 1 0 1 2 0 1 1 [2,] 1 2 0 0 1 1 1 2 2 0 0 2 2 0 1 2 2 2 1 0 [3,] 0 0 2 1 0 1 2 1 0 2 2 1 1 0 0 0 0 2 0 1 [4,] 1 1 2 1 0 2 2 1 1 1 0 1 2 1 0 2 2 0 2 0 [5,] 0 2 1 1 2 2 2 1 1 2 1 0 2 2 2 1 2 0 1 1 [6,] 0 1 2 0 0 0 2 0 0 0 0 1 0 1 0 1 1 1 1 2 [7,] 2 2 2 2 0 0 1 0 0 2 1 0 2 2 1 0 2 0 0 0 [8,] 2 1 2 1 1 1 0 1 0 0 2 1 0 1 1 2 2 2 0 1 [9,] 2 1 0 2 0 0 0 0 0 0 0 0 0 2 0 1 0 0 2 2 [10,] 2 2 0 2 0 0 1 0 0 1 0 1 1 2 0 1 1 2 0 2 M can either be a regular matrix, a Matrix (from the Matrix package), a data.frame, or a data.table. We can count the number of each genotype at each SNP in just three simple lines of R code:\n(aa \u003c- colSums(M == 0)) (Aa \u003c- colSums(M == 1)) (AA \u003c- colSums(M == 2)) And here are the results:\n[1] 3 2 3 2 7 4 2 4 6 5 5 3 3 2 6 2 2 5 4 3 [1] 2 4 1 5 2 3 4 5 3 2 3 6 2 4 3 5 2 1 4 4 [1] 5 4 6 3 1 3 4 1 1 3 2 1 5 4 1 3 6 4 2 3 There you have it! A super quick way to get those genotype counts. Hope that was helpful!\n",
+  "wordCount" : "464",
+  "inLanguage": "en",
+  "image": "https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished": "2025-04-24T00:00:00Z",
+  "dateModified": "2025-04-24T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Mohammad Ali Nilforooshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nilforooshan.github.io/blog/posts/calc_geno_freq/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mohammad Ali Nilforooshan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nilforooshan.github.io/blog/favicon.ico"
+    }
+  }
+}
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH0F7W96MC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JH0F7W96MC');
+</script>
+</head>
+
+<body class="" id="
+    top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nilforooshan.github.io/blog/" accesskey="h" title="Mohammad Ali Nilforooshan (Alt + H)">Mohammad Ali Nilforooshan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nilforooshan.github.io/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nilforooshan.github.io/" title="My website">
+                    <span>My website</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Quick Tip: Calculating Genotype Frequencies
+    </h1>
+    <div class="post-meta"><span title='2025-04-24 00:00:00 +0000 UTC'>April 24, 2025</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan
+
+</div>
+  </header> 
+  <div class="post-content"><p>In this short blog post, I&rsquo;m gonna show you a super simple way to calculate genotype frequencies.</p>
+<p>Let&rsquo;s say we&rsquo;re looking at a single spot in the DNA (a biallelic situation) with two possible versions, &ldquo;A&rdquo; and &ldquo;a&rdquo;.
+That means we can have three possible genotype combos: &ldquo;AA&rdquo;, &ldquo;Aa&rdquo;, and &ldquo;aa&rdquo;.</p>
+<p>What we want to do is count how many times each of these genotypes shows up at each SNP.</p>
+<p>Let&rsquo;s create a random genotype matrix for 10 genotyped animals and 20 SNPs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">995</span>)
+</span></span><span style="display:flex;"><span>(M <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#a6e22e">sample</span>(<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">200</span>, replace <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)), nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>))
+</span></span></code></pre></div><p>Which gives us:</p>
+<pre tabindex="0"><code>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14] [,15] [,16] [,17] [,18] [,19] [,20]
+ [1,]    2    0    2    1    0    2    1    1    1     0     1     1     2     1     0     1     2     0     1     1
+ [2,]    1    2    0    0    1    1    1    2    2     0     0     2     2     0     1     2     2     2     1     0
+ [3,]    0    0    2    1    0    1    2    1    0     2     2     1     1     0     0     0     0     2     0     1
+ [4,]    1    1    2    1    0    2    2    1    1     1     0     1     2     1     0     2     2     0     2     0
+ [5,]    0    2    1    1    2    2    2    1    1     2     1     0     2     2     2     1     2     0     1     1
+ [6,]    0    1    2    0    0    0    2    0    0     0     0     1     0     1     0     1     1     1     1     2
+ [7,]    2    2    2    2    0    0    1    0    0     2     1     0     2     2     1     0     2     0     0     0
+ [8,]    2    1    2    1    1    1    0    1    0     0     2     1     0     1     1     2     2     2     0     1
+ [9,]    2    1    0    2    0    0    0    0    0     0     0     0     0     2     0     1     0     0     2     2
+[10,]    2    2    0    2    0    0    1    0    0     1     0     1     1     2     0     1     1     2     0     2
+</code></pre><p><code>M</code> can either be a regular <code>matrix</code>, a <code>Matrix</code> (from the Matrix package), a <code>data.frame</code>, or a <code>data.table</code>.
+We can count the number of each genotype at each SNP in just three simple lines of R code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>(aa <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">colSums</span>(M <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>(Aa <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">colSums</span>(M <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>(AA <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">colSums</span>(M <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>))
+</span></span></code></pre></div><p>And here are the results:</p>
+<pre tabindex="0"><code>[1] 3 2 3 2 7 4 2 4 6 5 5 3 3 2 6 2 2 5 4 3
+[1] 2 4 1 5 2 3 4 5 3 2 3 6 2 4 3 5 2 1 4 4
+[1] 5 4 6 3 1 3 4 1 1 3 2 1 5 4 1 3 6 4 2 3
+</code></pre><p>There you have it!
+A super quick way to get those genotype counts.
+Hope that was helpful!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nilforooshan.github.io/blog/tags/r/">R</a></li>
+      <li><a href="https://nilforooshan.github.io/blog/tags/quantitative-genetics/">Quantitative Genetics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://nilforooshan.github.io/blog/">Mohammad Ali Nilforooshan</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

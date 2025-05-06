@@ -9,10 +9,24 @@
       <url>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://nilforooshan.github.io/blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.144.2</generator>
+    <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QPDF: A useful tool for handling PDF files</title>
+      <link>https://nilforooshan.github.io/blog/posts/qpdf/</link>
+      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/qpdf/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/qpdf/qpdf&#34;&gt;QPDF&lt;/a&gt; is a command-line tool that excels in PDF structure manipulation.
+It is not a rendering or viewing tool like &lt;code&gt;pdftk&lt;/code&gt;, but a powerful utility for tasks such as page extraction, rearrangement, and merging—ideal for scripting and automation.&lt;/p&gt;
+&lt;p&gt;In this post, I demonstrate common QPDF use cases using &lt;code&gt;file1.pdf&lt;/code&gt; and &lt;code&gt;file2.pdf&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-extract-a-range-of-pages-from-file1pdf&#34;&gt;1. Extract a Range of Pages from &lt;code&gt;file1.pdf&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;To extract pages 3 to 7 from &lt;code&gt;file1.pdf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;qpdf file1.pdf --pages . 3-7 -- output.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here, &lt;code&gt;.&lt;/code&gt; refers to the current input file (&lt;code&gt;file1.pdf&lt;/code&gt;). The result is saved in &lt;code&gt;output.pdf&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Quick Tip: Calculating Genotype Frequencies</title>
       <link>https://nilforooshan.github.io/blog/posts/calc_geno_freq/</link>

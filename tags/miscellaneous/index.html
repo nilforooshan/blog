@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir=" auto">
+<html lang="en" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <meta name="description" content="My blog">
 <meta name="author" content="Mohammad Ali Nilforooshan">
 <link rel="canonical" href="https://nilforooshan.github.io/blog/tags/miscellaneous/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://nilforooshan.github.io/blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://nilforooshan.github.io/blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://nilforooshan.github.io/blog/favicon-32x32.png">
@@ -116,8 +116,7 @@
 </script>
 </head>
 
-<body class=" list" id="
-    top">
+<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -134,7 +133,7 @@
         <div class="logo">
             <a href="https://nilforooshan.github.io/blog/" accesskey="h" title="Mohammad Ali Nilforooshan (Alt + H)">Mohammad Ali Nilforooshan</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -192,6 +191,22 @@
     Miscellaneous
   </h1>
 </header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">QPDF: A useful tool for handling PDF files
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>QPDF is a command-line tool that excels in PDF structure manipulation. It is not a rendering or viewing tool like pdftk, but a powerful utility for tasks such as page extraction, rearrangement, and merging—ideal for scripting and automation.
+In this post, I demonstrate common QPDF use cases using file1.pdf and file2.pdf.
+1. Extract a Range of Pages from file1.pdf To extract pages 3 to 7 from file1.pdf:
+qpdf file1.pdf --pages . 3-7 -- output.pdf Here, . refers to the current input file (file1.pdf). The result is saved in output.pdf.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-05 00:00:00 +0000 UTC'>May 5, 2025</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan</footer>
+  <a class="entry-link" aria-label="post link to QPDF: A useful tool for handling PDF files" href="https://nilforooshan.github.io/blog/posts/qpdf/"></a>
+</article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">

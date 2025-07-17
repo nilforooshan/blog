@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About the QP transformation and Quaas (1988)</title>
+      <link>https://nilforooshan.github.io/blog/posts/qp/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/qp/</guid>
+      <description>&lt;p&gt;You might have heard about the QP transformation.
+This transformation is named after &lt;a href=&#34;https://doi.org/10.3168/jds.S0022-0302(81)82778-6&#34;&gt;Quaas and Pollak (1981)&lt;/a&gt;.
+These two scientists are among the pioneers of Quantitative Genetics and Animal Breeding.
+They have published numerous articles that are well ahead of their time.
+When I was in the University of Nebraska-Lincoln, I had the chance to meet Dr. John Pollak.
+However, I have not met Dr. Richard Louis Quaas.
+Later, I realised that &lt;a href=&#34;https://news.cornell.edu/stories/2022/08/richard-quaas-pioneer-livestock-genetics-dies-77&#34;&gt;he died in October 19, 2021, at the age of 77&lt;/a&gt;.
+The QP transformation enables genetic groups to be included in the pedigree, in contrast to previous approaches where genetic groups are included as a distinct fixed effect in the model.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>QPDF: A useful tool for handling PDF files</title>
       <link>https://nilforooshan.github.io/blog/posts/qpdf/</link>

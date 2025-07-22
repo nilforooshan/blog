@@ -11,8 +11,23 @@
     </image>
     <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/tags/quantitative-genetics/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do We Still Need Pedigree Information in the Age of Genomics?</title>
+      <link>https://nilforooshan.github.io/blog/posts/pedigree/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/pedigree/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve heard this question a few times, and I thought it would be helpful to address it in a short post.&lt;/p&gt;
+&lt;p&gt;The short answer is: Yes!&lt;/p&gt;
+&lt;p&gt;But why? Here&amp;rsquo;s why pedigree information still matters:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Not all animals are genotyped&lt;/strong&gt;, and we still need to perform genetic evaluations for non-genotyped animals. Pedigree-based genetic relationships between genotyped and non-genotyped animals, and among non-genotyped animals themselves are essential for this.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Even if we genotype all current and future animals&lt;/strong&gt;, we can&amp;rsquo;t change the fact that many animals from previous generations cannot be genotyped.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Non-genotyped animals contribute to the genetic evaluation of genotyped animals&lt;/strong&gt; through their phenotypes. They also provide valuable insights into population structure, such as breed composition and genetic lines.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pedigree information is crucial for genotype imputation&lt;/strong&gt;, helping fill in missing genetic data with greater accuracy.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
     <item>
       <title>About the QP transformation and Quaas (1988)</title>
       <link>https://nilforooshan.github.io/blog/posts/qp/</link>

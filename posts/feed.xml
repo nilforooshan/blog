@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/posts/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scale G for Inbreeding Coefficients ≥ 0</title>
+      <link>https://nilforooshan.github.io/blog/posts/scale_diag_g/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/scale_diag_g/</guid>
+      <description>&lt;p&gt;Inbreeding is the probability that an individual inherits two identical alleles from a common ancestor (Falconer and Mackay, 1996).
+There are several ways to obtain inbreeding coefficients using pedigree or genomic information.
+One method is via the diagonal elements of the genetic relationship matrix.&lt;/p&gt;
+&lt;p&gt;Let &lt;strong&gt;A&lt;/strong&gt; be the numerator (pedigree) relationship matrix and $a_{ii}$ its &lt;em&gt;i&lt;/em&gt;th diagonal element.
+The inbreeding coefficient of the &lt;em&gt;i&lt;/em&gt;th animal is:&lt;/p&gt;
+&lt;p&gt;$$
+F_i = a_{ii} - 1.
+$$&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Do We Still Need Pedigree Information in the Age of Genomics?</title>
       <link>https://nilforooshan.github.io/blog/posts/pedigree/</link>

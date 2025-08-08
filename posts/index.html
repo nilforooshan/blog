@@ -209,6 +209,21 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Scale G for Inbreeding Coefficients ≥ 0
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Inbreeding is the probability that an individual inherits two identical alleles from a common ancestor (Falconer and Mackay, 1996). There are several ways to obtain inbreeding coefficients using pedigree or genomic information. One method is via the diagonal elements of the genetic relationship matrix.
+Let A be the numerator (pedigree) relationship matrix and $a_{ii}$ its ith diagonal element. The inbreeding coefficient of the ith animal is:
+$$ F_i = a_{ii} - 1. $$
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-08 00:00:00 +0000 UTC'>August 8, 2025</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan</footer>
+  <a class="entry-link" aria-label="post link to Scale G for Inbreeding Coefficients ≥ 0" href="https://nilforooshan.github.io/blog/posts/scale_diag_g/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Do We Still Need Pedigree Information in the Age of Genomics?
     </h2>
   </header>
@@ -342,20 +357,6 @@ git remote add origin https://github.com/&lt;USER&gt;/&lt;REPONAME&gt;.git git b
   </div>
   <footer class="entry-footer"><span title='2024-10-25 00:00:00 +0000 UTC'>October 25, 2024</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan</footer>
   <a class="entry-link" aria-label="post link to git quick start" href="https://nilforooshan.github.io/blog/posts/git-quick-start/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Polars Tutorial
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Adopted from https://www.youtube.com/playlist?list=PLINDUevGdb7U_ZRLCpqKWutmcY0vCUFOI
-See Polars Tutorial2 for more.
-Reading CSV Files import polars as pl # df = pl.read_csv(&#39;pl_data.csv&#39;) Creating New Columns df = pl.DataFrame({&#39;Name&#39;: [&#39;Mario&#39;, &#39;Luigi&#39;, &#39;Wario&#39;, &#39;Mario&#39;, &#39;Mario&#39;], &#39;Age&#39;: [30,28,26,30,30]}) print(df) shape: (5, 2)┌───────┬─────┐│ Name ┆ Age ││ --- ┆ --- ││ str ┆ i64 │╞═══════╪═════╡│ Mario ┆ 30 ││ Luigi ┆ 28 ││ Wario ┆ 26 ││ Mario ┆ 30 ││ Mario ┆ 30 │└───────┴─────┘ score_values = pl.Series([95,99,94,90,96]) df = df.with_columns(Score = pl.lit(score_values), Score_x2 = pl.lit(score_values*2)) print(df) shape: (5, 4)┌───────┬─────┬───────┬──────────┐│ Name ┆ Age ┆ Score ┆ Score_x2 ││ --- ┆ --- ┆ --- ┆ --- ││ str ┆ i64 ┆ i64 ┆ i64 │╞═══════╪═════╪═══════╪══════════╡│ Mario ┆ 30 ┆ 95 ┆ 190 ││ Luigi ┆ 28 ┆ 99 ┆ 198 ││ Wario ┆ 26 ┆ 94 ┆ 188 ││ Mario ┆ 30 ┆ 90 ┆ 180 ││ Mario ┆ 30 ┆ 96 ┆ 192 │└───────┴─────┴───────┴──────────┘ Dropping Columns print(df.drop(&#39;Score_x2&#39;)) print(df.drop(&#39;Score_x2&#39;, &#39;Score&#39;)) print(df.drop([&#39;Score_x2&#39;, &#39;Score&#39;])) df.drop_in_place(&#39;Score_x2&#39;) print(df) shape: (5, 3)┌───────┬─────┬───────┐│ Name ┆ Age ┆ Score ││ --- ┆ --- ┆ --- ││ str ┆ i64 ┆ i64 │╞═══════╪═════╪═══════╡│ Mario ┆ 30 ┆ 95 ││ Luigi ┆ 28 ┆ 99 ││ Wario ┆ 26 ┆ 94 ││ Mario ┆ 30 ┆ 90 ││ Mario ┆ 30 ┆ 96 │└───────┴─────┴───────┘shape: (5, 2)┌───────┬─────┐│ Name ┆ Age ││ --- ┆ --- ││ str ┆ i64 │╞═══════╪═════╡│ Mario ┆ 30 ││ Luigi ┆ 28 ││ Wario ┆ 26 ││ Mario ┆ 30 ││ Mario ┆ 30 │└───────┴─────┘shape: (5, 2)┌───────┬─────┐│ Name ┆ Age ││ --- ┆ --- ││ str ┆ i64 │╞═══════╪═════╡│ Mario ┆ 30 ││ Luigi ┆ 28 ││ Wario ┆ 26 ││ Mario ┆ 30 ││ Mario ┆ 30 │└───────┴─────┘shape: (5, 3)┌───────┬─────┬───────┐│ Name ┆ Age ┆ Score ││ --- ┆ --- ┆ --- ││ str ┆ i64 ┆ i64 │╞═══════╪═════╪═══════╡│ Mario ┆ 30 ┆ 95 ││ Luigi ┆ 28 ┆ 99 ││ Wario ┆ 26 ┆ 94 ││ Mario ┆ 30 ┆ 90 ││ Mario ┆ 30 ┆ 96 │└───────┴─────┴───────┘ Drop Duplicate Rows df = pl.DataFrame({&#39;Name&#39;: [&#39;Mario&#39;, &#39;Luigi&#39;, &#39;Wario&#39;, &#39;Mario&#39;, &#39;Mario&#39;], &#39;Age&#39;: [30,28,26,30,30]}) print(df.unique()) shape: (3, 2)┌───────┬─────┐│ Name ┆ Age ││ --- ┆ --- ││ str ┆ i64 │╞═══════╪═════╡│ Mario ┆ 30 ││ Luigi ┆ 28 ││ Wario ┆ 26 │└───────┴─────┘ Iterating Polars Dataframes for row in df.rows(): print(row) print(row[0]) (&#39;Mario&#39;, 30)Mario(&#39;Luigi&#39;, 28)Luigi(&#39;Wario&#39;, 26)Wario(&#39;Mario&#39;, 30)Mario(&#39;Mario&#39;, 30)Mario Plot Polars Dataframe import matplotlib.pyplot as plt df = pl.DataFrame({&#39;Date&#39;: [&#39;1/1/2023&#39;,&#39;1/2/2023&#39;,&#39;1/3/2023&#39;,&#39;1/4/2023&#39;,&#39;1/5/2023&#39;,&#39;1/6/2023&#39;,&#39;1/7/2023&#39;,&#39;1/8/2023&#39;,&#39;1/9/2023&#39;,&#39;1/10/2023&#39;], &#39;Price&#39;: [15,16,16,15,14,13,14,17,16,18]}) dates = list(df[&#39;Date&#39;]) prices = list(df[&#39;Price&#39;]) plt.plot(dates, prices) plt.show() ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-10-25 00:00:00 +0000 UTC'>October 25, 2024</span>&nbsp;·&nbsp;Mohammad Ali Nilforooshan</footer>
-  <a class="entry-link" aria-label="post link to Polars Tutorial" href="https://nilforooshan.github.io/blog/posts/polars-tutorial/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

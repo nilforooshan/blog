@@ -11,8 +11,26 @@
     </image>
     <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/posts/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Count the Number of Generations?</title>
+      <link>https://nilforooshan.github.io/blog/posts/count_gens/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/count_gens/</guid>
+      <description>&lt;p&gt;Wondering how to count the number of generations in a population?
+Knowing the pedigree depth is important in population studies.
+It can get more complex with overlapping generations, but the logic and process are simple.&lt;/p&gt;
+&lt;p&gt;There are two ways to approach this: &lt;strong&gt;top-bottom&lt;/strong&gt; and &lt;strong&gt;bottom-top&lt;/strong&gt;, differing only in the direction of counting.&lt;/p&gt;
+&lt;h2 id=&#34;top-bottom-approach&#34;&gt;Top-bottom approach&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Discard animals with both parents missing.&lt;/li&gt;
+&lt;li&gt;Set parents that no longer appear in the pedigree (i.e., not in the first column) to missing.&lt;/li&gt;
+&lt;li&gt;Count one generation.&lt;/li&gt;
+&lt;li&gt;Repeat until no animals remain in the pedigree.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here&amp;rsquo;s the R code, assuming &lt;code&gt;ped&lt;/code&gt; is a pedigree data frame with animal, sire, and dam columns, and missing parents are denoted as 0:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Code Snippets in the Age of AI</title>
       <link>https://nilforooshan.github.io/blog/posts/codesnippets_ai/</link>

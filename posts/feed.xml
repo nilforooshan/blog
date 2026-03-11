@@ -11,8 +11,24 @@
     </image>
     <generator>Hugo -- 0.147.0</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nilforooshan.github.io/blog/posts/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculation of heterosis and recombination loss</title>
+      <link>https://nilforooshan.github.io/blog/posts/heterosis_recombination/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://nilforooshan.github.io/blog/posts/heterosis_recombination/</guid>
+      <description>&lt;p&gt;In this post, I demonstrate the calculation of heterosis and recombination loss coefficients using an example pedigree.&lt;/p&gt;
+&lt;p&gt;Heterosis (hybrid vigor) and recombination loss are critical concepts in animal and plant breeding, particularly in crossbreeding systems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Heterosis&lt;/strong&gt; is the favourable gene effect in crossbred offspring, calculated as&lt;/p&gt;
+&lt;p&gt;$$
+h_{AB}^k = p_A^s p_B^d + p_B^s p_A^d,
+$$&lt;/p&gt;
+&lt;p&gt;where $h_{AB}^k$ is the heterosis coefficient of progeny &lt;em&gt;k&lt;/em&gt; for the &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; breed combination,
+$p_A^s$ is the breed &lt;em&gt;A&lt;/em&gt; proportion in sire &lt;em&gt;s&lt;/em&gt; (the sire of &lt;em&gt;k&lt;/em&gt;), and
+$p_B^d$ is the breed &lt;em&gt;B&lt;/em&gt; proportion in dam &lt;em&gt;d&lt;/em&gt; (the dam of &lt;em&gt;k&lt;/em&gt;).
+$p_B^s$ and $p_A^d$ are self-explanatory.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Merry Christmas and Happy 2026</title>
       <link>https://nilforooshan.github.io/blog/posts/2026/</link>
